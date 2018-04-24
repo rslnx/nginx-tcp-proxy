@@ -1,0 +1,9 @@
+proxy:
+  container_name: proxy
+  build: .
+  restart: always
+  ports:
+    - "1180:80"
+    - "11443:443"
+  environment:
+    - "UPSTREAM=${UPSTREAM}"
